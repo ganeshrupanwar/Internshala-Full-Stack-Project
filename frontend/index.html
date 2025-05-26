@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>EmptyCup</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="mobile-wrapper">
+
+    <!-- Top App Bar -->
+    <header class="top-bar">
+      <img src="assets/icons/logo-small 1.png" alt="Logo" class="logo" />
+      <h1>EmptyCup</h1>
+      <img src="assets/icons/three-dots-vertical 1.png" alt="Menu" class="menu-icon" />
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="tabs">
+      <button class="tab"><img src="assets/icons/Group 6.png" alt="Contacts" /></button>
+      <button class="tab"><img src="assets/icons/Group 7.png" alt="Gallery" /></button>
+      <button class="tab"><img src="assets/icons/Group 8.png" alt="Map" /></button>
+      <button class="tab" id="filter-shortlist">
+        <img id="filter-icon" src="assets/icons/Group 10.png" alt="Shortlisted" />
+      </button>
+      <button class="tab"><img src="assets/icons/Group 9.png" alt="Sort" /></button>
+    </nav>
+
+    <!-- Listings Container -->
+    <main id="list-container">
+      <!--
+      Each .card represents one designer listing.
+      We’ll duplicate this in JS for each item in your JSON.
+    -->
+      <div class="card">
+        <div class="card-info">
+          <h2>Epic Designs</h2>
+          <!-- Star rating: you’ll use star.svg & star-outline.svg -->
+          <div class="rating">
+            <img src="assets/icons/Group 1.png" alt="★" />
+
+          </div>
+          <p class="subtitle">
+            Passionate team of 4 designers working out of Bangalore with an experience of 4 years.
+          </p>
+          <div class="stats">
+            <div><strong>57</strong><span>Projects</span></div>
+            <div><strong>8</strong><span>Years</span></div>
+            <div><strong>$$</strong><span>Price</span></div>
+          </div>
+          <div class="contacts">
+            <p>+91 – 984532853</p>
+            <p>+91 – 984532854</p>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="action-btn details">
+            <img src="assets/icons/arrow-right-short 1.png" alt="Details" />
+            <span>Details</span>
+          </button>
+          <button class="action-btn hide">
+            <img src="assets/icons/eye-slash 1.png" alt="Hide" />
+            <span>Hide</span>
+          </button>
+          <button class="action-btn shortlist" data-id="1">
+            <img src="assets/icons/Vector.png" alt="Shortlist" />
+            <span>Shortlist</span>
+          </button>
+          <button class="action-btn report">
+            <img src="assets/icons/exclamation-circle 1.png" alt="Report" />
+            <span>Report</span>
+          </button>
+        </div>
+      </div>
+      <!-- End single .card -->
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

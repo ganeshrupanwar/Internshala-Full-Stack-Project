@@ -1,0 +1,167 @@
+/* Simulate a phone screen */
+.mobile-wrapper {
+  max-width: 390px;
+  margin: 0 auto;
+  background: #ffffff;
+  min-height: 100vh;
+  border: 1px solid #eee;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  padding-bottom: 2rem;
+}
+
+/* Variables */
+:root {
+  --font-primary: 'Helvetica Neue', Arial, sans-serif;
+  --color-text: #2c2c2c;
+  --color-muted: #6c6c6c;
+  --color-card: #fdf9f1;
+  --color-border: #ece5de;
+  --color-accent: #b24b2f;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-primary);
+  background: #fafafa;
+  color: var(--color-text);
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+}
+.top-bar .logo { width: 24px; height: 24px; }
+.top-bar h1 { font-size: 1rem; font-weight: bold; }
+.top-bar .menu-icon { width: 16px; height: 16px; }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.5rem 0;
+  background: white;
+}
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.65rem;
+  color: var(--color-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.tab img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 4px;
+}
+
+/* Card */
+.card {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Alternate background: odd = color-card, even = white */
+#list-container .card:nth-child(odd) {
+  background: var(--color-card);
+}
+#list-container .card:nth-child(even) {
+  background: #ffffff;
+}
+
+.card-info {
+  flex: 1;
+  padding-right: 0.75rem;
+}
+.card-info h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Rating */
+.rating {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.rating img {
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+}
+
+/* Description */
+.subtitle {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+.stats div {
+  text-align: center;
+  flex: 1;
+}
+.stats strong {
+  font-size: 0.9rem;
+  display: block;
+}
+.stats span {
+  font-size: 0.65rem;
+  color: var(--color-muted);
+}
+
+/* Contacts */
+.contacts p {
+  font-size: 0.75rem;
+}
+
+/* Actions */
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.action-btn {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.6rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.action-btn img {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
